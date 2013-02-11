@@ -30,17 +30,13 @@ void draw() {
           // line(start_point.getScreenX(width),start_point.getScreenY(height),end_point.getScreenX(width),end_point.getScreenY(height));
            start_point = end_point;
         }
-       particles.add(new Particle(new PVector(tcur.getScreenX(width),tcur.getScreenY(height)))); 
+         if (tcur.getMotionSpeed()>0.03){
+             particles.add(new Particle(new PVector(tcur.getScreenX(width),tcur.getScreenY(height)))); 
+         }
       }
    }
 
-
-
-
-
-
-  
-   
+ 
   Iterator<Particle> it = particles.iterator();
   while (it.hasNext()) {
     Particle p = it.next();
